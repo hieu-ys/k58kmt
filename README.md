@@ -1,9 +1,37 @@
 # k58kmt
-Bài tập số 2 của SV: k225480106084-pham trung hieu - Hệ quản trị cơ sở dữ liệu
-tạo database
+# Bài tập số 2 của SV: k225480106084-pham trung hieu - Hệ quản trị cơ sở dữ liệu
+DEADLINE: 23H59 NGÀY 25/03/2025
+
+ĐIỀU KIỆN: (ĐÃ LÀM XONG BÀI 1)
+1. Đã cài đặt SQL Server 2022 Dev.
+2. Đã cài đặt SQL Managerment Studio bản mới nhất.
+3. Đã kết nối từ SQL Managerment Studio vào SQL Server.
+4. Đã có tài khoản github, biết cách tạo repository(kho lưu trữ) cho phép truy cập public.
+
+BÀI TOÁN:
+- Tạo csdl quan hệ với tên QLSV gồm các bảng sau:
+  + SinhVien(#masv,hoten,NgaySinh)
+  + Lop(#maLop,tenLop)
+  + GVCN(#@maLop,#@magv,#HK)
+  + LopSV(#@maLop,#@maSV,ChucVu)
+  + GiaoVien(#magv,hoten,NgaySinh,@maBM)
+  + BoMon(#MaBM,tenBM,@maKhoa)
+  + Khoa(#maKhoa,tenKhoa)
+  + MonHoc(#mamon,Tenmon,STC)
+  + LopHP(#maLopHP,TenLopHP,HK,@maMon,@maGV)
+  + DKMH(#@maLopHP,#@maSV,DiemTP,DiemThi,PhanTramThi)
+
+YÊU CẦU:
+1. Thực hiện các hành động sau trên giao diện đồ hoạ để tạo cơ sở dữ liệu cho bài toán:
+  + Tạo database mới, mô tả các tham số(nếu có) trong quá trình.
+  + Tạo các bảng dữ liệu với các trường như mô tả, chọn kiểu dữ liệu phù hợp với thực tế (tự tìm hiểu)
+  + Mỗi bảng cần thiết lập PK, FK(s) và CK(s) nếu cần thiết. (chú ý dấu # và @: # là chỉ PK, @ chỉ FK)
+2. Chuyển các thao tác đồ hoạ trên thành lệnh SQL tương đương. lưu tất cả các lệnh SQL trong file: Script_DML.sql
+
+bước1 tạo database
 ![Ảnh chụp màn hình (38)](https://github.com/user-attachments/assets/0ee86f5d-9db4-43fb-a53c-a04a2701559b)
 ![Ảnh chụp màn hình (39)](https://github.com/user-attachments/assets/b0702f61-f97e-4779-9244-d4d49028472f)
-tạo bảng
+bước 2 tạo bảng
 ![Ảnh chụp màn hình (41)](https://github.com/user-attachments/assets/701ee015-6d43-4b82-8841-f7b320c690c0)
 tạo các bảng theo yêu cầu
 ![Ảnh chụp màn hình (42)](https://github.com/user-attachments/assets/8d24d7e0-4170-47c3-9b4f-f1d6d6f0a1bc)
@@ -16,12 +44,12 @@ tạo các bảng theo yêu cầu
 ![Ảnh chụp màn hình (51)](https://github.com/user-attachments/assets/95f0128c-bbb2-40cf-9a15-a52ac03ee28f)
 ![Ảnh chụp màn hình (52)](https://github.com/user-attachments/assets/0e81ab04-83c3-490f-a2ae-e9c02be0a2ba)
 ![Ảnh chụp màn hình (53)](https://github.com/user-attachments/assets/b2fa242e-77ab-4f35-9c70-d5a64119e89e)
-bước 4 thêm các ràng buộc vào các bảng cần ràng buộc
+bước 3 thêm các ràng buộc vào các bảng cần ràng buộc
 ![Ảnh chụp màn hình (57)](https://github.com/user-attachments/assets/4ba5620a-c59d-4a5d-bb6a-bef43816ea05)
 ![Ảnh chụp màn hình (58)](https://github.com/user-attachments/assets/3b21a99e-8e91-4575-8d9f-b1d96f3f8ad9)
 ![Ảnh chụp màn hình (59)](https://github.com/user-attachments/assets/8a9265a2-dad6-4dc0-b062-8c4b58635299)
 ![Ảnh chụp màn hình (63)](https://github.com/user-attachments/assets/fe16b806-584a-4519-8b1c-c08cc25d783e)
-bước 5 cài khóa cho các thuộc tính trong bảng                                                                                         
+bước 4 cài khóa cho các thuộc tính trong bảng                                                                                         
 ![Ảnh chụp màn hình (64)](https://github.com/user-attachments/assets/ccc42258-0b19-43de-a39e-5344ad324ff4)
 ![Ảnh chụp màn hình (65)](https://github.com/user-attachments/assets/c88415b0-28ce-4880-8e8a-88462f08fc35)
 ![Ảnh chụp màn hình (66)](https://github.com/user-attachments/assets/f5202e43-5ca3-401b-b9c5-9fa2e7fe81f0)
